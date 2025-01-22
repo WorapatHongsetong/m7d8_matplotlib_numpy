@@ -1,5 +1,5 @@
-import drawlines_np as dnp
-import drawlines_o as do
+import drawlines_numpy as dnp
+import drawlines_original as do
 import time, random
 
 N = 10000000
