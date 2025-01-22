@@ -14,10 +14,6 @@ def create_lines(total: int, min: float, max: float) -> np.array:
     return lines_set
 
 
-lines = create_lines(total=20, min=3, max=9)
-print(lines)
-print(lines.shape)
-
 def rectangular_filter(target: np.array, x1: float, y1: float, x2: float, y2: float) -> np.array:
     # I love sets
     satisfied_lines = []
@@ -30,6 +26,15 @@ def rectangular_filter(target: np.array, x1: float, y1: float, x2: float, y2: fl
     
     return satisfied_lines
 
-filtered_lines = rectangular_filter(target=lines, x1=3, y1=3, x2=8, y2=8)
-print(filtered_lines)
-print(filtered_lines.shape)
+
+
+if __name__ == "__main__":
+    lines = create_lines(total=20, min=3, max=9)
+    print(lines)
+    print(lines.shape)
+    
+    filtered_lines = rectangular_filter(target=lines, x1=3, y1=3, x2=8, y2=8)
+    print(filtered_lines)
+    print(filtered_lines.shape)
+
+  
