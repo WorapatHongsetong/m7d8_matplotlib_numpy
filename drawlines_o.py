@@ -1,6 +1,15 @@
 import random as r
 
-def create_lines(total: int, min: float, max: float) -> tuple:
+def create_lines(set_of_lines:list[list]) -> tuple:
+    lines_set = []
+    for line in set_of_lines:
+        lines_set.append(tuple(line))
+    lines_set = tuple(lines_set)
+
+    return lines_set
+
+
+def create_lines_rand(total: int, min: float, max: float) -> tuple:
     lines_set = []
     for _ in range(total):
         line = []

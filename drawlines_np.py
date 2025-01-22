@@ -1,7 +1,15 @@
 import numpy as np
 import random as r
 
-def create_lines(total: int, min: float, max: float) -> np.array:
+def create_lines(set_of_lines:list[list]) -> np.array:
+    lines_set = []
+    for line in set_of_lines:
+        lines_set.append(np.array(line))
+    lines_set = np.array(lines_set)
+
+    return lines_set
+
+def create_lines_rand(total: int, min: float, max: float) -> np.array:
     lines_set = []
     for _ in range(total):
         line = []
